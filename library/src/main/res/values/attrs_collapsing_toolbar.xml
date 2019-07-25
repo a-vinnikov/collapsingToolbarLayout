@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CollapsingExtendToolbarLayout">
+        <attr name="expandedTitleMargin" format="dimension"/>
+        <attr name="expandedTitleMarginStart" format="dimension"/>
+        <attr name="expandedTitleMarginBottom" format="dimension"/>
+        <attr name="expandedTitleMarginEnd" format="dimension"/>
+        <attr name="collapsedTitleMarginStart" format="dimension"/>
+        <!-- The text appearance of the CollapsingToolbarLayouts title when it is fully
+             'expanded' -->
+        <attr name="expandedTitleTextAppearance" format="reference"/>
+        <!-- The text appearance of the CollapsingToolbarLayouts title when it is fully
+             'collapsed' -->
+        <attr name="collapsedTitleTextAppearance" format="reference"/>
+        <!-- The drawable to use as a scrim on top of the CollapsingToolbarLayouts content when
+             it has been scrolled sufficiently off screen. -->
+        <attr name="contentScrim" format="color"/>
+        <!-- The drawable to use as a scrim for the status bar content when the
+             CollapsingToolbarLayout has been scrolled sufficiently off screen. Only works on
+             Lollipop with the correct setup. -->
+        <attr name="statusBarScrim" format="color" />
+        <attr name="toolbar_title" format="reference" />
+        <attr name="arrow_width" format="dimension" />
+        <attr name="arrow_height" format="dimension" />
+        <attr name="arrow_padding" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CollapsingEventsAppBarLayout_LayoutParams">
+        <attr name="layout_collapseModeType">
+            <!-- The view will act as normal with no collapsing behavior. -->
+            <enum name="none" value="0"/>
+            <!-- The view will pin in place. -->
+            <enum name="pin" value="1"/>
+            <!-- The view will scroll in a parallax fashion. See the
+                 layout_collapseParallaxMultiplier attribute to change the multiplier. -->
+            <enum name="parallax" value="2"/>
+        </attr>
+        <!-- The multiplier used when layout_collapseMode is set to 'parallax'. The value should
+             be between 0.0 and 1.0. -->
+        <attr name="layout_collapseParallaxMultiplier" format="float"/>
+    </declare-styleable>
+</resources>
