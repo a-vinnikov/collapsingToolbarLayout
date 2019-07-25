@@ -85,7 +85,7 @@ class CollapsingExtendToolbarLayout : FrameLayout {
 
         mCollapsingTextHelper?.setExpandedTextAppearance(
             a.getResourceId(
-                R.styleable.CollapsingToolbarLayout_expandedTitleTextAppearance, 0
+                R.styleable.CollapsingExtendToolbarLayout_expandedTitleTextAppearance, 0
             )
         )
 
