@@ -59,25 +59,25 @@ class CollapsingExtendToolbarLayout : FrameLayout {
         val a = ThemeEnforcement.obtainStyledAttributes(
             context,
             attrs,
-            R.styleable.CollapsingEventsToolbarLayout,
+            R.styleable.CollapsingExtendToolbarLayout,
             defStyleAttr,
             com.google.android.material.R.style.Widget_Design_CollapsingToolbar
         )
 
         mCollapsedMarginLeft = a.getDimensionPixelSize(
-            R.styleable.CollapsingEventsToolbarLayout_collapsedTitleMarginStart, 0
+            R.styleable.CollapsingExtendToolbarLayout_collapsedTitleMarginStart, 0
         )
 
         mExpandedMarginLeft = a.getDimensionPixelSize(
-            R.styleable.CollapsingEventsToolbarLayout_expandedTitleMarginStart, 0
+            R.styleable.CollapsingExtendToolbarLayout_expandedTitleMarginStart, 0
         )
 
         mExpandedMarginRight = a.getDimensionPixelSize(
-            R.styleable.CollapsingEventsToolbarLayout_expandedTitleMarginEnd, 0
+            R.styleable.CollapsingExtendToolbarLayout_expandedTitleMarginEnd, 0
         )
 
         mExpandedMarginBottom = a.getDimensionPixelSize(
-            R.styleable.CollapsingEventsToolbarLayout_expandedTitleMarginBottom, 0
+            R.styleable.CollapsingExtendToolbarLayout_expandedTitleMarginBottom, 0
         )
 
         mCollapsingTextHelper = CollapsingTextHelper(this)
@@ -91,27 +91,27 @@ class CollapsingExtendToolbarLayout : FrameLayout {
 
         mCollapsingTextHelper?.setCollapsedTextAppearance(
             a.getResourceId(
-                R.styleable.CollapsingEventsToolbarLayout_collapsedTitleTextAppearance, 0
+                R.styleable.CollapsingExtendToolbarLayout_collapsedTitleTextAppearance, 0
             )
         )
 
         mCollapsingTextHelper?.setArrowWidth(
             a.getDimensionPixelSize(
-                R.styleable.CollapsingEventsToolbarLayout_arrow_width,
+                R.styleable.CollapsingExtendToolbarLayout_arrow_width,
                 0
             )
         )
 
         mCollapsingTextHelper?.setArrowHeight(
             a.getDimensionPixelSize(
-                R.styleable.CollapsingEventsToolbarLayout_arrow_height,
+                R.styleable.CollapsingExtendToolbarLayout_arrow_height,
                 0
             )
         )
 
         mCollapsingTextHelper?.setArrowPadding(
             a.getDimensionPixelSize(
-                R.styleable.CollapsingEventsToolbarLayout_arrow_padding,
+                R.styleable.CollapsingExtendToolbarLayout_arrow_padding,
                 0
             )
         )
@@ -134,8 +134,8 @@ class CollapsingExtendToolbarLayout : FrameLayout {
         styleAttributes.recycle()
 
 
-        if (a.hasValue(R.styleable.CollapsingEventsToolbarLayout_toolbar_title)) {
-            setTitle(a.getText(R.styleable.CollapsingEventsToolbarLayout_toolbar_title))
+        if (a.hasValue(R.styleable.CollapsingExtendToolbarLayout_toolbar_title)) {
+            setTitle(a.getText(R.styleable.CollapsingExtendToolbarLayout_toolbar_title))
         }
 
         a.recycle()
