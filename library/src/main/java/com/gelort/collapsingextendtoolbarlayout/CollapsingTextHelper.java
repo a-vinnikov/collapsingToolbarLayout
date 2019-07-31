@@ -78,6 +78,7 @@ public final class CollapsingTextHelper {
     private int mArrowPadding;
     private final Path mArrowPath = new Path();
     private final Rect mRectArea = new Rect();
+    private boolean mArrowVisible;
 
     public CollapsingTextHelper(View view) {
         mView = view;
@@ -170,6 +171,10 @@ public final class CollapsingTextHelper {
     public void setTextTypeFace(Typeface mTextTypeFace) {
         this.mTextTypeFace = mTextTypeFace;
         recalculate();
+    }
+
+    public void setArrowVisible(boolean mArrowVisible) {
+        this.mArrowVisible = mArrowVisible;
     }
 
     boolean isInRectArea(int touchX, int touchY) {
@@ -293,10 +298,13 @@ public final class CollapsingTextHelper {
                 canvas.drawText(mTextToDraw, 0, mTextToDraw.length(), x, y, mTextPaint);
             }
 
-            final int startArrowX = (int) (x + mTextWidth + mArrowPaddingEnd);
-            final int startArrowY = (int) (y - mTextPaint.descent() - mArrowSize[1] * 1.5f);
+            if (mArrowVisible) {
 
-            drawArrow(canvas, startArrowX, startArrowY, mArrowSize[0], mArrowSize[1]);
+                final int startArrowX = (int) (x + mTextWidth + mArrowPaddingEnd);
+                final int startArrowY = (int) (y - mTextPaint.descent() - mArrowSize[1] * 1.5f);
+
+                drawArrow(canvas, startArrowX, startArrowY, mArrowSize[0], mArrowSize[1]);
+            }
         }
         canvas.restoreToCount(saveCount);
     }

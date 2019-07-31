@@ -116,6 +116,13 @@ class CollapsingExtendToolbarLayout : FrameLayout {
             )
         )
 
+        mCollapsingTextHelper?.setArrowVisible(
+            a.getBoolean(
+                R.styleable.CollapsingExtendToolbarLayout_arrow_visible,
+                false
+            )
+        )
+
         val styleAttributes = getContext().obtainStyledAttributes(
             a.getResourceId(
                 R.styleable.CollapsingExtendToolbarLayout_expandedTitleTextAppearance, 0

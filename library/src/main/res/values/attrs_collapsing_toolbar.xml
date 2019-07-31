@@ -23,6 +23,7 @@
         <attr name="arrow_width" format="dimension" />
         <attr name="arrow_height" format="dimension" />
         <attr name="arrow_padding" format="dimension" />
+        <attr name="arrow_visible" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="CollapsingEventsAppBarLayout_LayoutParams">
