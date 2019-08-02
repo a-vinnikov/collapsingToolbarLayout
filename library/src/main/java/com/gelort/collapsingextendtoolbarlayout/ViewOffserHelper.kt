@@ -32,7 +32,7 @@ internal class ViewOffsetHelper(private val view: View) {
      * @return true if the offset has changed
      */
     fun setTopAndBottomOffset(offset: Int): Boolean {
-        if (isVerticalOffsetEnabled && offsetTop != offset) {
+        if (isVerticalOffsetEnabled && offsetTop != offset || view.top == 0) {
             offsetTop = offset
             applyOffsets()
             return true
