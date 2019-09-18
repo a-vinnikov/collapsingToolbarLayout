@@ -6,6 +6,7 @@
         <attr name="expandedTitleMarginBottom" format="dimension"/>
         <attr name="expandedTitleMarginEnd" format="dimension"/>
         <attr name="collapsedTitleMarginStart" format="dimension"/>
+        <attr name="collapsedTitleMarginEnd" format="dimension"/>
         <!-- The text appearance of the CollapsingToolbarLayouts title when it is fully
              'expanded' -->
         <attr name="expandedTitleTextAppearance" format="reference"/>

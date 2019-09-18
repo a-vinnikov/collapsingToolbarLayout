@@ -37,6 +37,7 @@ class CollapsingExtendToolbarLayout : FrameLayout {
     private var mExpandedMarginRight: Int = 0
     private var mExpandedMarginBottom: Int = 0
     private var mCollapsedMarginLeft: Int = 0
+    private var mCollapsedMarginRight: Int = 0
     private val mRect = Rect()
     private var mCollapsingTextHelper: CollapsingTextHelper? = null
     private var mContentScrim: Drawable? = null
@@ -66,6 +67,10 @@ class CollapsingExtendToolbarLayout : FrameLayout {
 
         mCollapsedMarginLeft = a.getDimensionPixelSize(
             R.styleable.CollapsingExtendToolbarLayout_collapsedTitleMarginStart, 0
+        )
+
+        mCollapsedMarginRight = a.getDimensionPixelSize(
+            R.styleable.CollapsingExtendToolbarLayout_collapsedTitleMarginEnd, 0
         )
 
         mExpandedMarginLeft = a.getDimensionPixelSize(
@@ -245,7 +250,7 @@ class CollapsingExtendToolbarLayout : FrameLayout {
         ViewGroupUtils.getDescendantRect(this, mDummyView!!, mRect)
         mCollapsingTextHelper?.setCollapsedBounds(
             mCollapsedMarginLeft, bottom - mRect.height(),
-            mRect.right, bottom
+            mRect.right - mCollapsedMarginRight, bottom
         )
         // Update the expanded bounds
         mCollapsingTextHelper?.setExpandedBounds(
